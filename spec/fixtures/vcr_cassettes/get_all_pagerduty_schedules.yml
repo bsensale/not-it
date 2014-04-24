@@ -1,0 +1,127 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://fakedomain.pagerduty.com/api/v1/schedules/FAKESCHED1?since=<%= start_date %>&until=<%= end_date %>
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Content-Type: 
+      - application/json
+      Authorization: 
+      - Token token=<%= apitoken %>
+      Accept-Encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - nginx
+      Date: 
+      - Mon, 21 Oct 2013 21:17:30 GMT
+      Content-Type: 
+      - application/json; charset=utf-8
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept-Encoding
+      Status: 
+      - 200 OK
+      Access-Control-Allow-Origin: 
+      - "*"
+      Access-Control-Allow-Methods: 
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age: 
+      - "1728000"
+      Access-Control-Allow-Headers: 
+      - Authorization, Content-Type, X-PagerDuty-Api-Local
+      X-Ua-Compatible: 
+      - IE=Edge,chrome=1
+      Etag: 
+      - "\"9a5b33701e183d48c8db98c37d9a0150\""
+      Cache-Control: 
+      - max-age=0, private, must-revalidate
+      Set-Cookie: 
+      - _pagerduty_session=FAKESESSION%3D--f76b0b2eddbc9ec18f0c9b345dd3ae736a287a71; path=/; HttpOnly
+      - uid=FAKEUID==; expires=Thu, 31-Dec-37 23:55:55 GMT; domain=pagerduty.com; path=/
+      X-Request-Id: 
+      - FAKEREQUESTID
+      X-Runtime: 
+      - "0.198100"
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\n  \"schedule\": {\n    \"id\": \"FAKESCHEDID1\",\n    \"name\": \"Fake Schedule One\",\n    \"time_zone\": \"Eastern Time (US & Canada)\",\n    \"today\": \"2013-10-18\",\n    \"escalation_policies\": [\n      {\n        \"id\": \"ESCPOLID\",\n        \"name\": \"Escalation Policy Name\"\n      }\n    ],\n    \"schedule_layers\": [\n      {\n        \"name\": \"Schedule Layer 1\",\n        \"rendered_schedule_entries\": [\n          {\n            \"start\": \"2013-10-15T00:00:00-04:00\",\n            \"end\": \"2013-10-15T09:00:00-04:00\",\n            \"user\": {\n              \"id\": \"USERID1\",\n              \"name\": \"User One\",\n              \"email\": \"userone@example.com\",\n              \"color\": \"teal\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-10-15T09:00:00-04:00\",\n            \"end\": \"2013-10-22T09:00:00-04:00\",\n            \"user\": {\n              \"id\": \"USERID2\",\n              \"name\": \"User Two\",\n              \"email\": \"usertwo@example.com\",\n              \"color\": \"forest-green\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-10-22T09:00:00-04:00\",\n            \"end\": \"2013-10-29T09:00:00-04:00\",\n            \"user\": {\n              \"id\": \"USERID3\",\n              \"name\": \"User Three\",\n              \"email\": \"userthree@example.com\",\n              \"color\": \"maroon\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-10-29T09:00:00-04:00\",\n            \"end\": \"2013-11-05T09:00:00-05:00\",\n            \"user\": {\n              \"id\": \"USERID4\",\n              \"name\": \"User Four\",\n              \"email\": \"userfour@example.com\",\n              \"color\": \"dark-slate-blue\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-11-05T09:00:00-05:00\",\n            \"end\": \"2013-11-12T09:00:00-05:00\",\n            \"user\": {\n              \"id\": \"USERID5\",\n              \"name\": \"USer Five\",\n              \"email\": \"userfive@example.com\",\n              \"color\": \"sea-green\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-11-12T09:00:00-05:00\",\n            \"end\": \"2013-11-15T00:00:00-05:00\",\n            \"user\": {\n              \"id\": \"USERID2\",\n              \"name\": \"User Two\",\n              \"email\": \"usertwo@example.com\",\n              \"color\": \"forest-green\"\n            },\n            \"id\": null\n          }\n        ],\n        \"id\": \"ROTID\",\n        \"priority\": 0,\n        \"start\": \"2013-10-15T09:00:00-04:00\",\n        \"end\": null,\n        \"restriction_type\": null,\n        \"rotation_virtual_start\": \"2013-10-15T09:00:00-04:00\",\n        \"rotation_turn_length_seconds\": 604800,\n        \"users\": [\n          {\n            \"member_order\": 1,\n            \"user\": {\n              \"id\": \"USERID2\",\n              \"name\": \"User Two\",\n              \"email\": \"usertwo@example.com\",\n              \"color\": \"forest-green\"\n            }\n          },\n          {\n            \"member_order\": 2,\n            \"user\": {\n              \"id\": \"USERID3\",\n              \"name\": \"User Three\",\n              \"email\": \"userthree@example.com\",\n              \"color\": \"maroon\"\n            }\n          },\n          {\n            \"member_order\": 3,\n            \"user\": {\n              \"id\": \"USERID4\",\n              \"name\": \"User Four\",\n              \"email\": \"userfour@example.com\",\n              \"color\": \"dark-slate-blue\"\n            }\n          },\n          {\n            \"member_order\": 4,\n            \"user\": {\n              \"id\": \"USERID5\",\n              \"name\": \"USer Five\",\n              \"email\": \"userfive@example.com\",\n              \"color\": \"sea-green\"\n            }\n          }\n        ],\n        \"restrictions\": [\n\n        ],\n        \"rendered_coverage_percentage\": 100.0\n      }\n    ],\n    \"overrides_subschedule\": {\n      \"name\": \"Overrides\",\n      \"rendered_schedule_entries\": [\n\n      ]\n    },\n    \"final_schedule\": {\n      \"name\": \"Final Schedule\",\n      \"rendered_schedule_entries\": [\n        {\n          \"start\": \"2013-10-15T00:00:00-04:00\",\n          \"end\": \"2013-10-15T09:00:00-04:00\",\n          \"user\": {\n            \"id\": \"USERID1\",\n            \"name\": \"User One\",\n            \"email\": \"userone@example.com\",\n            \"color\": \"teal\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-10-15T09:00:00-04:00\",\n          \"end\": \"2013-10-22T09:00:00-04:00\",\n          \"user\": {\n            \"id\": \"USERID2\",\n            \"name\": \"User Two\",\n            \"email\": \"usertwo@example.com\",\n            \"color\": \"forest-green\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-10-22T09:00:00-04:00\",\n          \"end\": \"2013-10-29T09:00:00-04:00\",\n          \"user\": {\n            \"id\": \"USERID3\",\n            \"name\": \"User Three\",\n            \"email\": \"userthree@example.com\",\n            \"color\": \"maroon\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-10-29T09:00:00-04:00\",\n          \"end\": \"2013-11-05T09:00:00-05:00\",\n          \"user\": {\n            \"id\": \"USERID4\",\n            \"name\": \"User Four\",\n            \"email\": \"userfour@example.com\",\n            \"color\": \"dark-slate-blue\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-11-05T09:00:00-05:00\",\n          \"end\": \"2013-11-12T09:00:00-05:00\",\n          \"user\": {\n            \"id\": \"USERID5\",\n            \"name\": \"USer Five\",\n            \"email\": \"userfive@example.com\",\n            \"color\": \"sea-green\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-11-12T09:00:00-05:00\",\n          \"end\": \"2013-11-15T00:00:00-05:00\",\n          \"user\": {\n            \"id\": \"USERID2\",\n            \"name\": \"User Two\",\n            \"email\": \"usertwo@example.com\",\n            \"color\": \"forest-green\"\n          },\n          \"id\": null\n        }\n      ],\n      \"rendered_coverage_percentage\": 100.0\n    }\n  }\n}\n"
+    http_version: 
+  recorded_at: Mon, 21 Oct 2013 21:17:30 GMT
+- request: 
+    method: get
+    uri: https://fakedomain.pagerduty.com/api/v1/schedules/FAKESCHED2?since=<%= start_date %>&until=<%= end_date %>
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Content-Type: 
+      - application/json
+      Authorization: 
+      - Token token=<%= apitoken %>
+      Accept-Encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - nginx
+      Date: 
+      - Mon, 21 Oct 2013 21:17:30 GMT
+      Content-Type: 
+      - application/json; charset=utf-8
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept-Encoding
+      Status: 
+      - 200 OK
+      Access-Control-Allow-Origin: 
+      - "*"
+      Access-Control-Allow-Methods: 
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age: 
+      - "1728000"
+      Access-Control-Allow-Headers: 
+      - Authorization, Content-Type, X-PagerDuty-Api-Local
+      X-Ua-Compatible: 
+      - IE=Edge,chrome=1
+      Etag: 
+      - "\"9a5b33701e183d48c8db98c37d9a0150\""
+      Cache-Control: 
+      - max-age=0, private, must-revalidate
+      Set-Cookie: 
+      - _pagerduty_session=FAKESESSION%3D--f76b0b2eddbc9ec18f0c9b345dd3ae736a287a71; path=/; HttpOnly
+      - uid=FAKEUID==; expires=Thu, 31-Dec-37 23:55:55 GMT; domain=pagerduty.com; path=/
+      X-Request-Id: 
+      - FAKEREQUESTID
+      X-Runtime: 
+      - "0.198100"
+    body: 
+      encoding: ASCII-8BIT
+      string: "{\n  \"schedule\": {\n    \"id\": \"FAKESCHEDID1\",\n    \"name\": \"Fake Schedule One\",\n    \"time_zone\": \"Eastern Time (US & Canada)\",\n    \"today\": \"2013-10-18\",\n    \"escalation_policies\": [\n      {\n        \"id\": \"ESCPOLID\",\n        \"name\": \"Escalation Policy Name\"\n      }\n    ],\n    \"schedule_layers\": [\n      {\n        \"name\": \"Schedule Layer 1\",\n        \"rendered_schedule_entries\": [\n          {\n            \"start\": \"2013-10-15T00:00:00-04:00\",\n            \"end\": \"2013-10-15T09:00:00-04:00\",\n            \"user\": {\n              \"id\": \"USERID1\",\n              \"name\": \"User One\",\n              \"email\": \"userone@example.com\",\n              \"color\": \"teal\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-10-15T09:00:00-04:00\",\n            \"end\": \"2013-10-22T09:00:00-04:00\",\n            \"user\": {\n              \"id\": \"USERID2\",\n              \"name\": \"User Two\",\n              \"email\": \"usertwo@example.com\",\n              \"color\": \"forest-green\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-10-22T09:00:00-04:00\",\n            \"end\": \"2013-10-29T09:00:00-04:00\",\n            \"user\": {\n              \"id\": \"USERID3\",\n              \"name\": \"User Three\",\n              \"email\": \"userthree@example.com\",\n              \"color\": \"maroon\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-10-29T09:00:00-04:00\",\n            \"end\": \"2013-11-05T09:00:00-05:00\",\n            \"user\": {\n              \"id\": \"USERID4\",\n              \"name\": \"User Four\",\n              \"email\": \"userfour@example.com\",\n              \"color\": \"dark-slate-blue\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-11-05T09:00:00-05:00\",\n            \"end\": \"2013-11-12T09:00:00-05:00\",\n            \"user\": {\n              \"id\": \"USERID5\",\n              \"name\": \"USer Five\",\n              \"email\": \"userfive@example.com\",\n              \"color\": \"sea-green\"\n            },\n            \"id\": null\n          },\n          {\n            \"start\": \"2013-11-12T09:00:00-05:00\",\n            \"end\": \"2013-11-15T00:00:00-05:00\",\n            \"user\": {\n              \"id\": \"USERID2\",\n              \"name\": \"User Two\",\n              \"email\": \"usertwo@example.com\",\n              \"color\": \"forest-green\"\n            },\n            \"id\": null\n          }\n        ],\n        \"id\": \"ROTID\",\n        \"priority\": 0,\n        \"start\": \"2013-10-15T09:00:00-04:00\",\n        \"end\": null,\n        \"restriction_type\": null,\n        \"rotation_virtual_start\": \"2013-10-15T09:00:00-04:00\",\n        \"rotation_turn_length_seconds\": 604800,\n        \"users\": [\n          {\n            \"member_order\": 1,\n            \"user\": {\n              \"id\": \"USERID2\",\n              \"name\": \"User Two\",\n              \"email\": \"usertwo@example.com\",\n              \"color\": \"forest-green\"\n            }\n          },\n          {\n            \"member_order\": 2,\n            \"user\": {\n              \"id\": \"USERID3\",\n              \"name\": \"User Three\",\n              \"email\": \"userthree@example.com\",\n              \"color\": \"maroon\"\n            }\n          },\n          {\n            \"member_order\": 3,\n            \"user\": {\n              \"id\": \"USERID4\",\n              \"name\": \"User Four\",\n              \"email\": \"userfour@example.com\",\n              \"color\": \"dark-slate-blue\"\n            }\n          },\n          {\n            \"member_order\": 4,\n            \"user\": {\n              \"id\": \"USERID5\",\n              \"name\": \"USer Five\",\n              \"email\": \"userfive@example.com\",\n              \"color\": \"sea-green\"\n            }\n          }\n        ],\n        \"restrictions\": [\n\n        ],\n        \"rendered_coverage_percentage\": 100.0\n      }\n    ],\n    \"overrides_subschedule\": {\n      \"name\": \"Overrides\",\n      \"rendered_schedule_entries\": [\n\n      ]\n    },\n    \"final_schedule\": {\n      \"name\": \"Final Schedule\",\n      \"rendered_schedule_entries\": [\n        {\n          \"start\": \"2013-10-15T00:00:00-04:00\",\n          \"end\": \"2013-10-15T09:00:00-04:00\",\n          \"user\": {\n            \"id\": \"USERID1\",\n            \"name\": \"User One\",\n            \"email\": \"userone@example.com\",\n            \"color\": \"teal\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-10-15T09:00:00-04:00\",\n          \"end\": \"2013-10-22T09:00:00-04:00\",\n          \"user\": {\n            \"id\": \"USERID2\",\n            \"name\": \"User Two\",\n            \"email\": \"usertwo@example.com\",\n            \"color\": \"forest-green\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-10-22T09:00:00-04:00\",\n          \"end\": \"2013-10-29T09:00:00-04:00\",\n          \"user\": {\n            \"id\": \"USERID3\",\n            \"name\": \"User Three\",\n            \"email\": \"userthree@example.com\",\n            \"color\": \"maroon\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-10-29T09:00:00-04:00\",\n          \"end\": \"2013-11-05T09:00:00-05:00\",\n          \"user\": {\n            \"id\": \"USERID4\",\n            \"name\": \"User Four\",\n            \"email\": \"userfour@example.com\",\n            \"color\": \"dark-slate-blue\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-11-05T09:00:00-05:00\",\n          \"end\": \"2013-11-12T09:00:00-05:00\",\n          \"user\": {\n            \"id\": \"USERID5\",\n            \"name\": \"USer Five\",\n            \"email\": \"userfive@example.com\",\n            \"color\": \"sea-green\"\n          },\n          \"id\": null\n        },\n        {\n          \"start\": \"2013-11-12T09:00:00-05:00\",\n          \"end\": \"2013-11-15T00:00:00-05:00\",\n          \"user\": {\n            \"id\": \"USERID2\",\n            \"name\": \"User Two\",\n            \"email\": \"usertwo@example.com\",\n            \"color\": \"forest-green\"\n          },\n          \"id\": null\n        }\n      ],\n      \"rendered_coverage_percentage\": 100.0\n    }\n  }\n}\n"
+    http_version: 
+  recorded_at: Mon, 21 Oct 2013 21:17:30 GMT
+recorded_with: VCR 2.6.0

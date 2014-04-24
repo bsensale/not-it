@@ -1,0 +1,44 @@
+--- 
+http_interactions: 
+- request: 
+    method: delete
+    uri: https://www.googleapis.com/calendar/v3/calendars/<%= gcal_id %>/events/<%= event_id %>?sendNotifications=<%= send_notifications %>
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      User-Agent: 
+      - Not-It-FAKECLIENTID.apps.googleusercontent.com/0.0.0 google-api-ruby-client/0.6.4 Mac OS X/10.8.5
+      Authorization: 
+      - Bearer <% access_token %>
+      Cache-Control: 
+      - no-store
+      Content-Type: 
+      - application/x-www-form-urlencoded
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 204
+      message: No Content
+    headers: 
+      Cache-Control: 
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma: 
+      - no-cache
+      Expires: 
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Date: 
+      - Tue, 22 Oct 2013 22:32:49 GMT
+      Etag: 
+      - "\"ETAG\""
+      Server: 
+      - GSE
+      Alternate-Protocol: 
+      - 443:quic
+    body: 
+      encoding: US-ASCII
+      string: ""
+    http_version: 
+  recorded_at: Tue, 22 Oct 2013 22:32:49 GMT
+recorded_with: VCR 2.6.0

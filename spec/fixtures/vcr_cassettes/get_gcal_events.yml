@@ -1,0 +1,121 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://www.googleapis.com/calendar/v3/calendars/<%= gcal_id %>/events?fields=items(attendees,description,end,id,start,summary)&singleEvents=true&timeMax=<%= end_date %>&timeMin=<%= start_date %>
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      User-Agent: 
+      - Not-It-<%= client_id %>.apps.googleusercontent.com/0.0.0 google-api-ruby-client/0.6.4 Mac OS X/10.8.5
+      Authorization: 
+      - Bearer <%= access_token %>
+      Cache-Control: 
+      - no-store
+      Content-Type: 
+      - application/x-www-form-urlencoded
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Expires: 
+      - Mon, 21 Oct 2013 22:24:07 GMT
+      Date: 
+      - Mon, 21 Oct 2013 22:24:07 GMT
+      Cache-Control: 
+      - private, max-age=0, must-revalidate, no-transform
+      Etag: 
+      - "\"ETAG\""
+      Content-Type: 
+      - application/json; charset=UTF-8
+      X-Content-Type-Options: 
+      - nosniff
+      X-Frame-Options: 
+      - SAMEORIGIN
+      X-Xss-Protection: 
+      - 1; mode=block
+      Server: 
+      - GSE
+      Alternate-Protocol: 
+      - 443:quic
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      encoding: US-ASCII
+      string: |
+        {
+         "items": [
+          {
+           "id": "id1",
+           "summary": "Fake Schedule One: User One",
+           "description": "FAKESCHED1",
+           "start": {
+            "date": "2013-10-28"
+           },
+           "end": {
+            "date": "2013-11-04"
+           },
+           "attendees": [
+            {
+             "email": "userone@example.com",
+             "displayName": "User One",
+             "responseStatus": "accepted"
+            }
+           ]
+          },
+          {
+           "id": "id2",
+           "summary": "Fake Schedule One: User Two",
+           "description": "FAKESCHED2",
+           "start": {
+            "date": "2013-10-14"
+           },
+           "end": {
+            "date": "2013-10-21"
+           },
+           "attendees": [
+            {
+             "email": "usertwo@example.com",
+             "displayName": "User Two",
+             "responseStatus": "accepted"
+            }
+           ]
+          },
+          {
+           "id": "id3",
+           "summary": "Fake Schedule Two: User One",
+           "description": "FAKESCHED2",
+           "start": {
+            "dateTime": "2013-10-30T14:30:00-04:00"
+           },
+           "end": {
+            "dateTime": "2013-10-30T15:00:00-04:00"
+           },
+           "attendees": [
+            {
+             "email": "userone@example.com",
+             "displayName": "User One",
+             "responseStatus": "accepted"
+            }
+           ]
+          },
+          {
+           "id": "id4",
+           "summary": "Non-PagerDuty Event",
+           "description": "Breeze: http://brightcove.adobeconnect.com/picasso\n\nSkype: brightcove.picasso\n\n",
+           "start": {
+            "dateTime": "2013-10-30T14:30:00-04:00"
+           },
+           "end": {
+            "dateTime": "2013-10-30T15:00:00-04:00"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Mon, 21 Oct 2013 22:24:07 GMT
+recorded_with: VCR 2.6.0
